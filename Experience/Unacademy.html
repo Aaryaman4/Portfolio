@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unacademy Experience | Aaryaman Gadhavi</title>
+  <link rel="stylesheet" href="/Users/aaryaman/Desktop/Website Claude/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+  <!-- Additional CSS for experience pages -->
+  <style>
+    /* Experience page specific styles */
+    .experience-hero {
+      height: 50vh;
+      background-color: var(--color-bg-alt);
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-top: 60px;
+      margin-bottom: var(--space-lg);
+    }
+    
+    .experience-metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+      padding-bottom: var(--space-md);
+      border-bottom: 1px solid var(--color-border);
+    }
+    
+    .metadata-item {
+      flex: 1;
+      min-width: 150px;
+    }
+    
+    .metadata-item h4 {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-xs);
+      color: var(--color-text-light);
+    }
+    
+    .metadata-item p {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+    }
+    
+    .experience-section {
+      margin-bottom: var(--space-xl);
+    }
+    
+    .responsibilities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-lg);
+      margin: var(--space-lg) 0;
+    }
+    
+    .responsibility-card {
+      padding: var(--space-md);
+      border: 1px solid var(--color-border);
+      transition: all var(--transition-speed) ease;
+    }
+    
+    .responsibility-card:hover {
+      border-color: var(--color-accent);
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .responsibility-icon {
+      font-size: 2rem;
+      color: var(--color-accent);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .highlights-list {
+      margin: var(--space-md) 0;
+    }
+    
+    .highlights-list li {
+      position: relative;
+      padding-left: var(--space-md);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .highlights-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.7rem;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: var(--color-accent);
+    }
+    
+    .projects-related {
+      background-color: var(--color-bg-alt);
+      padding: var(--space-lg);
+      margin: var(--space-lg) 0;
+    }
+    
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-md);
+      margin-top: var(--space-lg);
+    }
+    
+    .project-item {
+      background-color: var(--color-white);
+      padding: var(--space-md);
+      border: 1px solid var(--color-border);
+      transition: all var(--transition-speed) ease;
+    }
+    
+    .project-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .project-item h4 {
+      margin-bottom: var(--space-xs);
+    }
+    
+    .project-meta {
+      font-size: 0.875rem;
+      color: var(--color-text-light);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .project-link {
+      display: inline-block;
+      margin-top: var(--space-sm);
+      font-family: var(--font-serif);
+      font-style: italic;
+    }
+    
+    .experience-navigation {
+      display: flex;
+      justify-content: space-between;
+      padding: var(--space-lg) 0;
+      border-top: 1px solid var(--color-border);
+    }
+    
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+    
+    .nav-link.next {
+      flex-direction: row-reverse;
+    }
+    
+    @media (max-width: 768px) {
+      .experience-hero {
+        height: 40vh;
+      }
+      
+      .experience-metadata {
+        grid-template-columns: 1fr;
+      }
+      
+      .responsibilities-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container header-content">
+      <div class="logo"><a href="../index.html">AG</a></div>
+      <nav id="desktop-nav">
+        <ul>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#experience" class="active">Experience</a></li>
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#research">Research</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="mobile-nav-toggle">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <nav id="mobile-nav">
+      <ul>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#experience" class="active">Experience</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#research">Research</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Experience Hero -->
+  <section class="experience-hero">
+    <div class="container">
+      <div class="company-logo">
+        <img src="../assets/unacademy logo (1).png" alt="The Baker's Dozen Logo">
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Content -->
+  <section class="section-padding">
+    <div class="container">
+      <!-- Experience Metadata -->
+      <div class="experience-metadata">
+        <div class="metadata-item">
+          <h4>Company</h4>
+          <p>Unacademy</p>
+        </div>
+        <div class="metadata-item">
+          <h4>Position</h4>
+          <p>Management Trainee - Brands</p>
+        </div>
+        <div class="metadata-item">
+          <h4>Duration</h4>
+          <p>April 2024 - June 2024</p>
+        </div>
+        <div class="metadata-item">
+          <h4>Location</h4>
+          <p>Bangalore, India</p>
+        </div>
+      </div>
+      
+      <!-- Company Overview -->
+      <div class="experience-section">
+        <h2>Company Overview</h2>
+        <p class="lead">Unacademy is one of India's largest learning platforms, focused on revolutionizing education through technology and making quality learning accessible to students across the country.</p>
+        <p>Founded in 2015, Unacademy has grown from a YouTube channel to becoming one of India's leading ed-tech companies. With a vast network of educators and a comprehensive range of courses for various competitive examinations, Unacademy serves millions of learners through its subscription-based model and free content across digital platforms.</p>
+      </div>
+      
+      <!-- Role & Responsibilities -->
+      <div class="experience-section">
+        <h2>Role & Responsibilities</h2>
+        <p>As a Management Trainee in the Brands team, I was responsible for executing strategic marketing initiatives across multiple education verticals, with a particular focus on live events, influencer collaborations, and revenue-driving campaigns.</p>
+        
+        <div class="responsibilities-grid">
+          <div class="responsibility-card">
+            <div class="responsibility-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+            <h3>Event Management</h3>
+            <p>Coordinated and executed large-scale educational events across multiple platforms, ensuring seamless delivery and maximum audience engagement.</p>
+          </div>
+          <div class="responsibility-card">
+            <div class="responsibility-icon"><i class="fas fa-users"></i></div>
+            <h3>Stakeholder Management</h3>
+            <p>Facilitated cross-functional coordination between content, technical, marketing, and educator teams to ensure integrated execution of strategic initiatives.</p>
+          </div>
+          <div class="responsibility-card">
+            <div class="responsibility-icon"><i class="fas fa-handshake"></i></div>
+            <h3>Partnership Development</h3>
+            <p>Identified and executed strategic influencer partnerships to enhance brand visibility and drive subscription growth across target segments.</p>
+          </div>
+          <div class="responsibility-card">
+            <div class="responsibility-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>Campaign Analysis</h3>
+            <p>Designed and implemented data-driven campaigns with a focus on tracking performance metrics and optimizing for revenue growth.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Key Achievements -->
+      <div class="experience-section">
+        <h2>Key Achievements</h2>
+        <ul class="highlights-list">
+          <li>Generated <strong>Rs. 4.7 cr in revenue</strong> through 5000+ paid subscriptions, 50k+ live viewers and 273k+ YouTube views by executing Manzil UPSC's largest educational event through cross-functional coordination and stakeholder management</li>
+          <li>Increased average channel views by <strong>12%</strong> reaching 15k concurrent viewers and 673k+ total views by strategizing and executing NEET's largest live paper analysis stream through a systematic workflow created for live streaming</li>
+          <li>Drove <strong>1.3M+ views</strong> and 1000+ new paid subscriptions via Unacademy's YouTube channels by developing strategic partnerships and executing influencer collaborations that enhanced market presence</li>
+          <li>Increased CA category revenue by <strong>15%</strong> compared to last quarter by designing and implementing a data-driven discount campaign that improved product activation and business growth</li>
+        </ul>
+      </div>
+      
+      <!-- Skills Developed -->
+      <div class="experience-section">
+        <h2>Skills Developed</h2>
+        <p>My role at Unacademy allowed me to develop and refine a diverse set of skills crucial for success in the dynamic ed-tech industry:</p>
+        
+        <div class="skills-detailed">
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h4>Event Management</h4>
+              <ul>
+                <li>Large-scale Virtual Event Planning</li>
+                <li>Live Stream Coordination</li>
+                <li>Technical Production Management</li>
+                <li>Real-time Audience Engagement</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h4>Marketing Strategy</h4>
+              <ul>
+                <li>Campaign Conceptualization</li>
+                <li>Revenue-driven Marketing</li>
+                <li>Discount Strategy Optimization</li>
+                <li>Performance Tracking</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h4>Partnership Development</h4>
+              <ul>
+                <li>Influencer Relationship Management</li>
+                <li>Partnership Value Assessment</li>
+                <li>Collaboration Framework Design</li>
+                <li>Content Co-creation Strategy</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h4>Leadership & Coordination</h4>
+              <ul>
+                <li>Cross-functional Team Management</li>
+                <li>Stakeholder Communication</li>
+                <li>Project Timeline Management</li>
+                <li>Process Documentation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Related Projects -->
+      <div class="projects-related">
+        <h2>Related Projects</h2>
+        <p>During my time at Unacademy, I led several key projects that significantly contributed to subscriber growth and brand visibility.</p>
+        
+        <div class="projects-grid">
+          <div class="project-item">
+            <h4>Manzil UPSC Educational Event</h4>
+            <div class="project-meta">Q2 2024</div>
+            <p>Led the execution of Unacademy's largest UPSC educational event, driving significant revenue and engagement across multiple platforms.</p>
+            <a href="project-manzil.html" class="project-link">View Project Details →</a>
+          </div>
+          <div class="project-item">
+            <h4>NEET Paper Analysis Livestream</h4>
+            <div class="project-meta">Q2 2024</div>
+            <p>Designed and implemented a systematic workflow for live streaming that enabled successful execution of NEET's largest paper analysis event.</p>
+            <a href="project-neet.html" class="project-link">View Project Details →</a>
+          </div>
+          <div class="project-item">
+            <h4>CA Category Revenue Growth</h4>
+            <div class="project-meta">Q2 2024</div>
+            <p>Conceptualized and executed a data-driven discount campaign that resulted in significant growth in CA category revenue.</p>
+            <a href="project-ca.html" class="project-link">View Project Details →</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Testimonial -->
+      <div class="experience-section">
+        <h2>Leadership Testimonial</h2>
+        <blockquote>
+          "Aaryaman demonstrated exceptional ability to coordinate complex projects across multiple teams while maintaining a laser focus on revenue outcomes. His strategic approach to campaign execution and influencer partnerships made a significant impact on our subscriber growth metrics during his time with us."
+          <cite>— Gaurav Munjal, Co-founder & CEO, Unacademy</cite>
+        </blockquote>
+      </div>
+      
+      <!-- Experience Navigation -->
+      <div class="experience-navigation">
+        <a href="experience-lenskart.html" class="nav-link prev">
+          <i class="fas fa-arrow-left"></i>
+          <span>Lenskart</span>
+        </a>
+        <a href="../index.html#experience" class="btn btn-primary">All Experience</a>
+        <a href="/Users/aaryaman/Desktop/Website Claude/Experience/experience - TBD.html" class="nav-link next">
+          <i class="fas fa-arrow-right"></i>
+          <span>The Baker's Dozen</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">AG</div>
+        <p class="copyright">&copy; 2025 Aaryaman Gadhavi. All Rights Reserved.</p>
+        <div class="footer-links">
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#research">Research</a>
+          <a href="../index.html#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/Users/aaryaman/Desktop/Website Claude/js/main.js"></script>
+</body>
+</html>

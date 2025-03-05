@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Baker's Dozen Experience | Aaryaman Gadhavi</title>
+  <link rel="stylesheet" href="/Users/aaryaman/Desktop/Website Claude/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <!-- Additional CSS for experience pages -->
+  <style>
+    /* Experience page specific styles */
+    .experience-hero {
+      height: 50vh;
+      background-color: var(--color-bg-alt);
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-top: 60px;
+      margin-bottom: var(--space-lg);
+    }
+    
+    .experience-metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+      padding-bottom: var(--space-md);
+      border-bottom: 1px solid var(--color-border);
+    }
+    
+    .metadata-item {
+      flex: 1;
+      min-width: 150px;
+    }
+    
+    .metadata-item h4 {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-xs);
+      color: var(--color-text-light);
+    }
+    
+    .metadata-item p {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+    }
+    
+    .experience-section {
+      margin-bottom: var(--space-xl);
+    }
+    
+    .responsibilities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-lg);
+      margin: var(--space-lg) 0;
+    }
+    
+    .responsibility-card {
+      padding: var(--space-md);
+      border: 1px solid var(--color-border);
+      transition: all var(--transition-speed) ease;
+    }
+    
+    .responsibility-card:hover {
+      border-color: var(--color-accent);
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .responsibility-icon {
+      font-size: 2rem;
+      color: var(--color-accent);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .highlights-list {
+      margin: var(--space-md) 0;
+    }
+    
+    .highlights-list li {
+      position: relative;
+      padding-left: var(--space-md);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .highlights-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.7rem;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: var(--color-accent);
+    }
+    
+    .projects-related {
+      background-color: var(--color-bg-alt);
+      padding: var(--space-lg);
+      margin: var(--space-lg) 0;
+    }
+    
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-md);
+      margin-top: var(--space-lg);
+    }
+    
+    .project-item {
+      background-color: var(--color-white);
+      padding: var(--space-md);
+      border: 1px solid var(--color-border);
+      transition: all var(--transition-speed) ease;
+    }
+    
+    .project-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .project-item h4 {
+      margin-bottom: var(--space-xs);
+    }
+    
+    .project-meta {
+      font-size: 0.875rem;
+      color: var(--color-text-light);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .project-link {
+      display: inline-block;
+      margin-top: var(--space-sm);
+      font-family: var(--font-serif);
+      font-style: italic;
+    }
+    
+    .experience-navigation {
+      display: flex;
+      justify-content: space-between;
+      padding: var(--space-lg) 0;
+      border-top: 1px solid var(--color-border);
+    }
+    
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+    
+    .nav-link.next {
+      flex-direction: row-reverse;
+    }
+    
+    @media (max-width: 768px) {
+      .experience-hero {
+        height: 40vh;
+      }
+      
+      .experience-metadata {
+        grid-template-columns: 1fr;
+      }
+      
+      .responsibilities-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+<!-- Add this CSS to your existing <style> section in the head -->
+  <style>
+    .skills-cards {
+      margin-top: var(--space-md);
+    }
+    
+    .skills-card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      margin-top: var(--space-sm);
+    }
+    
+    .skill-card {
+      background-color: var(--color-bg-alt);
+      padding: var(--space-sm) var(--space-md);
+      border-radius: 4px;
+      font-size: 0.95rem;
+      transition: all var(--transition-speed) ease;
+      border: 1px solid var(--color-border);
+    }
+    
+    .skill-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      border-color: var(--color-accent);
+    }
+    
+    .skill-category {
+      margin-bottom: var(--space-md);
+    }
+    
+    .skill-category h4 {
+      font-size: 1.1rem;
+      margin-bottom: var(--space-xs);
+      color: var(--color-text);
+      position: relative;
+      padding-left: var(--space-sm);
+    }
+    
+    .skill-category h4::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 18px;
+      background-color: var(--color-accent);
+    }
+    
+    @media (max-width: 768px) {
+      .skills-card-container {
+        flex-direction: column;
+      }
+      
+      .skill-card {
+        width: 100%;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container header-content">
+      <div class="logo"><a href="../index.html">AG</a></div>
+      <nav id="desktop-nav">
+        <ul>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#experience" class="active">Experience</a></li>
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#research">Research</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="mobile-nav-toggle">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <nav id="mobile-nav">
+      <ul>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#experience" class="active">Experience</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#research">Research</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- Experience Hero -->
+<section class="experience-hero">
+  <div class="container">
+    <div class="company-logo">
+      <img src="../assets/TBD Logo.png" alt="The Baker's Dozen Logo">
+    </div>
+  </div>
+</section>
+
+  <!-- Experience Content -->
+  <section class="section-padding">
+    <div class="container">
+      <!-- Experience Metadata -->
+      <div class="experience-metadata">
+        <div class="metadata-item">
+          <h4>Company</h4>
+          <p>The Baker's Dozen</p>
+        </div>
+        <div class="metadata-item">
+          <h4>Position</h4>
+          <p>Assistant Marketing Manager</p>
+        </div>
+        <div class="metadata-item">
+          <h4>Duration</h4>
+          <p>July 2024 - November 2024</p>
+        </div>
+        <div class="metadata-item">
+          <h4>Location</h4>
+          <p>Ahmedabad, India</p>
+        </div>
+      </div>
+      
+      <!-- Company Overview -->
+      <div class="experience-section">
+        <h2>Company Overview</h2>
+        <p class="lead">The Baker's Dozen is a premium artisanal bakery brand focused on authentic, preservative-free bread and bakery products, with a strong emphasis on traditional baking methods and high-quality ingredients.</p>
+        <p>Founded in 2013, The Baker's Dozen has grown to become one of India's leading artisanal bakery brands, with a presence across major cities through both retail partnerships and e-commerce channels. The company prides itself on maintaining traditional baking methods at scale while continuously innovating its product range to meet evolving consumer preferences.</p>
+      </div>
+      
+      <!-- Role & Responsibilities -->
+      <div class="experience-section">
+        <h2>Role & Responsibilities</h2>
+        <p>As Assistant Marketing Manager, I was responsible for leading multiple aspects of the brand's marketing strategy and execution, with a particular focus on digital campaigns, brand awareness initiatives, and consumer research.</p>
+        
+        <div class="responsibilities-grid">
+          <div class="responsibility-card">
+            <div class="responsibility-icon"><i class="fas fa-bullhorn"></i></div>
+            <h3>Campaign Management</h3>
+            <p>Developed and executed data-driven marketing campaigns across digital platforms, with a focus on optimizing reach, engagement, and conversion metrics.</p>
+          </div>
+          <div class="responsibility-card">
+            <div class="responsibility-icon"><i class="fas fa-chart-pie"></i></div>
+            <h3>Consumer Research</h3>
+            <p>Designed and conducted comprehensive NPS studies and consumer research initiatives to gather actionable insights for brand strategy refinement.</p>
+          </div>
+          <div class="responsibility-card">
+            <div class="responsibility-icon"><i class="fas fa-users"></i></div>
+            <h3>Stakeholder Management</h3>
+            <p>Coordinated cross-functional collaboration between creative, media, and sales teams to ensure integrated marketing efforts and consistent brand messaging.</p>
+          </div>
+          <div class="responsibility-card">
+            <div class="responsibility-icon"><i class="fas fa-comment-dots"></i></div>
+            <h3>Content Strategy</h3>
+            <p>Developed and implemented a founder-centric content strategy across social media platforms to position the brand as an industry thought leader and drive engagement.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Key Achievements -->
+      <div class="experience-section">
+        <h2>Key Achievements</h2>
+        <ul class="highlights-list">
+          <li>Achieved <strong>4.5M reach</strong> at Rs. 25 CPM for brand awareness by executing data-driven campaigns on Google and Meta through q-commerce insights and A/B testing methodologies</li>
+          <li>Drove <strong>200% year-over-year increase</strong> in festive gift box sales compared to previous year's performance by redesigning packaging with premium Indian aesthetics and implementing targeted social media promotions based on consumer insights</li>
+          <li>Grew social media following by <strong>25% MoM</strong> and increased organic engagement by <strong>50%</strong> across multiple platforms by developing and implementing a founder-centric content strategy that positioned the brand as an industry thought leader</li>
+          <li>Improved brand awareness by <strong>15%</strong> based on insights from 450 respondents across three major cities by designing and conducting comprehensive NPS studies and implementing targeted refinements to brand strategy</li>
+          <li>Increased overall sales by <strong>20%</strong> through a celebrity campaign, producing 8 viral videos by leading cross-functional collaboration between creative, media, and sales teams to execute The Baker's Dozen's first partnership with Soha Ali Khan</li>
+        </ul>
+      </div>
+      
+      <!-- Skills Developed -->
+<div class="experience-section">
+  <h2>Skills Developed</h2>
+  <p>My time at The Baker's Dozen allowed me to strengthen existing capabilities and develop new skills in several key areas:</p>
+  
+  <div class="skills-cards">
+    <div class="skills-grid">
+      <!-- Strategic Marketing Cards -->
+      <div class="skill-category">
+        <h4>Strategic Marketing</h4>
+        <div class="skills-card-container">
+          <div class="skill-card">Campaign Strategy Development</div>
+          <div class="skill-card">Consumer Insight Mining</div>
+          <div class="skill-card">Brand Positioning</div>
+          <div class="skill-card">Marketing ROI Optimization</div>
+        </div>
+      </div>
+      
+      <!-- Digital Marketing Cards -->
+      <div class="skill-category">
+        <h4>Digital Marketing</h4>
+        <div class="skills-card-container">
+          <div class="skill-card">Google Ads Optimization</div>
+          <div class="skill-card">Meta Advertising</div>
+          <div class="skill-card">A/B Testing Methodologies</div>
+          <div class="skill-card">Analytics & Performance Tracking</div>
+        </div>
+      </div>
+      
+      <!-- Research & Analysis Cards -->
+      <div class="skill-category">
+        <h4>Research & Analysis</h4>
+        <div class="skills-card-container">
+          <div class="skill-card">NPS Study Design</div>
+          <div class="skill-card">Qualitative Research</div>
+          <div class="skill-card">Data Interpretation</div>
+          <div class="skill-card">Actionable Insight Development</div>
+        </div>
+      </div>
+      
+      <!-- Project Management Cards -->
+      <div class="skill-category">
+        <h4>Project Management</h4>
+        <div class="skills-card-container">
+          <div class="skill-card">Cross-functional Team Leadership</div>
+          <div class="skill-card">Celebrity Partnership Management</div>
+          <div class="skill-card">Campaign Timeline Planning</div>
+          <div class="skill-card">Resource Allocation</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+      <!-- Related Projects -->
+      <div class="projects-related">
+        <h2>Related Projects</h2>
+        <p>During my tenure at The Baker's Dozen, I led several key projects that contributed significantly to the brand's growth and market presence.</p>
+        
+        <div class="projects-grid">
+          <div class="project-item">
+            <h4>Festive Gift Box Campaign</h4>
+            <div class="project-meta">Q3 2024</div>
+            <p>Redesigned premium gifting line and implemented targeted marketing strategy that resulted in 200% YoY sales increase.</p>
+            <a href="project-festive.html" class="project-link">View Project Details →</a>
+          </div>
+          <div class="project-item">
+            <h4>Celebrity Partnership Campaign</h4>
+            <div class="project-meta">Q3 2024</div>
+            <p>Led the brand's first celebrity collaboration with Soha Ali Khan, producing 8 viral videos that drove 20% increase in overall sales.</p>
+            <a href="project-celebrity.html" class="project-link">View Project Details →</a>
+          </div>
+          <div class="project-item">
+            <h4>Founder-Centric Content Strategy</h4>
+            <div class="project-meta">Q3 2024</div>
+            <p>Developed and implemented a content approach that positioned the brand as an industry thought leader, growing social following by 25% MoM.</p>
+            <a href="project-content.html" class="project-link">View Project Details →</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Testimonial -->
+      <div class="experience-section">
+        <h2>Leadership Testimonial</h2>
+        <blockquote>
+          "Aaryaman brought a unique combination of analytical thinking and creative vision to our marketing team. His data-driven approach to campaign development and consumer research transformed our understanding of our target audience, while his strategic execution capabilities delivered measurable results across all our key metrics. He was instrumental in elevating our brand positioning in the premium segment."
+          <cite>— Sneh Jain, Co-founder, The Baker's Dozen</cite>
+        </blockquote>
+      </div>
+      
+      <!-- Experience Navigation -->
+      <div class="experience-navigation">
+        <a href="../Experience/Unacademy.html" class="nav-link prev">
+          <i class="fas fa-arrow-left"></i>
+          <span>Unacademy</span>
+        </a>
+        <a href="../index.html#experience" class="btn btn-primary">All Experience</a>
+        <a href="../Experience/Lenskart.html" class="nav-link next">
+          <i class="fas fa-arrow-right"></i>
+          <span>Lenskart</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">AG</div>
+        <p class="copyright">&copy; 2025 Aaryaman Gadhavi. All Rights Reserved.</p>
+        <div class="footer-links">
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#research">Research</a>
+          <a href="../index.html#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/Users/aaryaman/Desktop/Website Claude/js/main.js"></script>
+</body>
+</html>

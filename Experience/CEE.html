@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEE Experience | Aaryaman Gadhavi</title>
+  <link rel="stylesheet" href="/Users/aaryaman/Desktop/Website Claude/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+  <!-- Additional CSS for experience pages -->
+  <style>
+    /* Experience page specific styles */
+    .experience-hero {
+      height: 50vh;
+      background-color: var(--color-bg-alt);
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-top: 60px;
+      margin-bottom: var(--space-lg);
+    }
+    
+    .experience-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .experience-hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('../assets/images/environment-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.2;
+      z-index: 1;
+    }
+    
+    .experience-metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+      padding-bottom: var(--space-md);
+      border-bottom: 1px solid var(--color-border);
+    }
+    
+    .metadata-item {
+      flex: 1;
+      min-width: 150px;
+    }
+    
+    .metadata-item h4 {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-xs);
+      color: var(--color-text-light);
+    }
+    
+    .metadata-item p {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+    }
+    
+    .experience-section {
+      margin-bottom: var(--space-xl);
+    }
+    
+    .highlights-list {
+      margin: var(--space-md) 0;
+    }
+    
+    .highlights-list li {
+      position: relative;
+      padding-left: var(--space-md);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .highlights-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.7rem;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: var(--color-accent);
+    }
+    
+    .impact-card {
+      background-color: var(--color-bg-alt);
+      padding: var(--space-md);
+      border-radius: 5px;
+      margin-bottom: var(--space-md);
+      border-left: 4px solid var(--color-accent);
+    }
+    
+    .impact-card h3 {
+      color: var(--color-text);
+      margin-bottom: var(--space-xs);
+    }
+    
+    .impact-card p {
+      margin-bottom: 0;
+    }
+    
+    .experience-navigation {
+      display: flex;
+      justify-content: space-between;
+      padding: var(--space-lg) 0;
+      border-top: 1px solid var(--color-border);
+    }
+    
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+    
+    .nav-link.next {
+      flex-direction: row-reverse;
+    }
+    
+    .challenge-phases {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      margin: var(--space-lg) 0;
+    }
+    
+    .phase-card {
+      flex: 1;
+      min-width: 250px;
+      background-color: var(--color-bg-alt);
+      padding: var(--space-md);
+      border-radius: 5px;
+      border-top: 3px solid var(--color-accent);
+    }
+    
+    .phase-card h3 {
+      margin-bottom: var(--space-sm);
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+    
+    .phase-card h3 i {
+      color: var(--color-accent);
+    }
+    
+    .phase-card ul {
+      padding-left: var(--space-md);
+      margin-bottom: 0;
+    }
+    
+    .phase-card ul li {
+      margin-bottom: var(--space-xs);
+    }
+    
+    .un-sdg-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      margin: var(--space-md) 0;
+    }
+    
+    .sdg-item {
+      background-color: var(--color-bg-alt);
+      padding: var(--space-sm);
+      border-radius: 5px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+    
+    .sdg-item i {
+      color: var(--color-accent);
+    }
+    
+    @media (max-width: 768px) {
+      .experience-hero {
+        height: 40vh;
+      }
+      
+      .experience-metadata {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container header-content">
+      <div class="logo"><a href="../index.html">AG</a></div>
+      <nav id="desktop-nav">
+        <ul>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#experience" class="active">Experience</a></li>
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#research">Research</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="mobile-nav-toggle">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <nav id="mobile-nav">
+      <ul>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#experience" class="active">Experience</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#research">Research</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Experience Hero -->
+  <section class="experience-hero">
+    <div class="container">
+      <h1>Centre for Environment Education</h1>
+      <div class="subtitle">Intern | May 2020 - June 2020</div>
+    </div>
+  </section>
+
+  <!-- Experience Content -->
+  <section class="section-padding">
+    <div class="container">
+      <!-- Experience Metadata -->
+      <div class="experience-metadata">
+        <div class="metadata-item">
+          <h4>Organization</h4>
+          <p>Centre for Environment Education</p>
+        </div>
+        <div class="metadata-item">
+          <h4>Position</h4>
+          <p>Intern</p>
+        </div>
+        <div class="metadata-item">
+          <h4>Duration</h4>
+          <p>May 2020 - June 2020</p>
+        </div>
+        <div class="metadata-item">
+          <h4>Location</h4>
+          <p>Ahmedabad, India</p>
+        </div>
+      </div>
+      
+      <!-- Organization Overview -->
+      <div class="experience-section">
+        <h2>Organization Overview</h2>
+        <p class="lead">The Centre for Environment Education (CEE) is a nationally and internationally recognized institution dedicated to environmental awareness, education, and sustainable development.</p>
+        
+        <p>Established in 1984 as a Centre of Excellence under the Ministry of Environment, Forest and Climate Change, Government of India, CEE plays a pivotal role in developing innovative environmental education programs and materials. The organization is committed to building capacity in sustainable development through field projects that demonstrate the practical application of environmental education.</p>
+        
+        <p>With a presence across India and international collaborations, CEE works to strengthen environmental education and education for sustainable development through partnerships with government, NGOs, industry, and educational institutions.</p>
+      </div>
+      
+      <!-- The Plastic Tide Turners Challenge -->
+      <div class="experience-section">
+        <h2>The Plastic Tide Turners Challenge</h2>
+        <p>During my internship, I was primarily involved with the Plastic Tide Turners Challenge, a global initiative backed by the United Nations Environment Programme (UNEP) to combat plastic pollution. This youth-led movement aims to engage and empower young people to take action against plastic waste through awareness, community engagement, and advocacy for policy changes.</p>
+        
+        <div class="impact-card">
+          <h3>Global Impact</h3>
+          <p>Since its launch in 2018, the Tide Turners Challenge has mobilized over 800,000 young people across 50 countries worldwide, creating a significant impact in addressing plastic pollution. In India, CEE and WWF-India serve as key implementing partners, driving both digital and on-ground activities to tackle single-use plastics.</p>
+        </div>
+        
+        <h3>Challenge Structure</h3>
+        <p>The Tide Turners Plastic Challenge is structured as a multi-level program that progressively engages participants in more complex and impactful activities:</p>
+        
+        <div class="challenge-phases">
+          <div class="phase-card">
+            <h3><i class="fas fa-seedling"></i> Entry Level</h3>
+            <ul>
+              <li>Personal plastic consumption awareness</li>
+              <li>Individual plastic reduction pledges</li>
+              <li>Learning about plastic pollution impacts</li>
+              <li>Basic lifestyle changes implementation</li>
+            </ul>
+          </div>
+          <div class="phase-card">
+            <h3><i class="fas fa-users"></i> Leader Level</h3>
+            <ul>
+              <li>Community engagement activities</li>
+              <li>Local awareness campaigns</li>
+              <li>Small-scale cleanup efforts</li>
+              <li>Engaging family and friends</li>
+            </ul>
+          </div>
+          <div class="phase-card">
+            <h3><i class="fas fa-globe-americas"></i> Champion Level</h3>
+            <ul>
+              <li>Policy advocacy initiatives</li>
+              <li>Large-scale community projects</li>
+              <li>Institutional plastic reduction</li>
+              <li>Sustainable alternatives promotion</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- My Contribution -->
+      <div class="experience-section">
+        <h2>My Contribution</h2>
+        <p>As an Intern working with the Tide Turners Challenge during the early months of the COVID-19 pandemic, I helped drive digital engagement and outreach to maintain momentum despite physical restrictions:</p>
+        
+        <ul class="highlights-list">
+          <li><strong>Campaign Leadership:</strong> Led a targeted campaign that surpassed sign-up targets by <strong>200%</strong>, effectively mobilizing youth participation despite pandemic restrictions</li>
+          <li><strong>Digital Engagement:</strong> Promoted sustainability through coordinated social media outreach, creating content that resonated with the target demographic</li>
+          <li><strong>Educational Webinar:</strong> Organized and facilitated an educational webinar that achieved a <strong>40% conversion rate</strong>, successfully transitioning in-person activities to digital formats</li>
+          <li><strong>Challenge Completion:</strong> Personally completed all challenge levels, developing comprehensive knowledge in environmental advocacy and sustainable practices</li>
+        </ul>
+      </div>
+      
+      <!-- Challenge Impact -->
+      <div class="experience-section">
+        <h2>Challenge Impact & Alignment with UN SDGs</h2>
+        <p>The Tide Turners Plastic Challenge has made remarkable impacts both in India and globally, contributing to several UN Sustainable Development Goals:</p>
+        
+        <div class="un-sdg-grid">
+          <div class="sdg-item"><i class="fas fa-water"></i> SDG 6: Clean Water and Sanitation</div>
+          <div class="sdg-item"><i class="fas fa-city"></i> SDG 11: Sustainable Cities and Communities</div>
+          <div class="sdg-item"><i class="fas fa-shopping-bag"></i> SDG 12: Responsible Consumption and Production</div>
+          <div class="sdg-item"><i class="fas fa-water"></i> SDG 14: Life Below Water</div>
+          <div class="sdg-item"><i class="fas fa-handshake"></i> SDG 17: Partnerships for the Goals</div>
+        </div>
+        
+        <h3 class="mt-4">Notable Achievements of the Challenge</h3>
+        <ul class="highlights-list">
+          <li>Contributed to a state-wide ban on single-use plastics in Bihar, India</li>
+          <li>Expanded efforts in Delhi and Tamil Nadu, creating regional momentum</li>
+          <li>Received international recognition as a model for youth environmental stewardship</li>
+          <li>Facilitated knowledge exchange between different regions and cultures on plastic pollution solutions</li>
+          <li>Created a framework for youth engagement that continues to inspire new participants</li>
+        </ul>
+      </div>
+      
+      <!-- Skills Developed -->
+      <div class="experience-section">
+        <h2>Skills Developed</h2>
+        <p>My internship at CEE allowed me to develop valuable skills in environmental advocacy and digital engagement:</p>
+        
+        <ul class="highlights-list">
+          <li><strong>Environmental Communication:</strong> Learned to effectively communicate complex environmental issues to diverse audiences</li>
+          <li><strong>Digital Campaign Management:</strong> Gained experience in planning and executing online outreach campaigns during pandemic restrictions</li>
+          <li><strong>Webinar Organization:</strong> Developed skills in planning, promoting, and facilitating educational webinars with measurable conversion goals</li>
+          <li><strong>Community Engagement:</strong> Practiced techniques for motivating participation in environmental initiatives despite physical limitations</li>
+          <li><strong>Sustainability Advocacy:</strong> Deepened understanding of effective advocacy approaches for environmental and sustainability issues</li>
+        </ul>
+      </div>
+      
+      <!-- Reflection -->
+      <div class="experience-section">
+        <h2>Personal Reflection</h2>
+        <p>My internship at CEE, though brief, provided valuable insights into how global environmental challenges can be addressed through coordinated action and youth engagement. Working with the Tide Turners Challenge during the pandemic demonstrated the resilience and adaptability of environmental initiatives, as we successfully pivoted to digital strategies while maintaining impact and reach.</p>
+        
+        <p>This experience reinforced my belief in the power of education and awareness as catalysts for environmental change. It also highlighted the importance of meeting people where they are—in this case, online during a global pandemic—and adapting outreach approaches to current circumstances without compromising on core environmental goals.</p>
+      </div>
+      
+      <!-- Experience Navigation -->
+      <div class="experience-navigation">
+        <div></div> <!-- Empty div to maintain flex spacing -->
+        <a href="../index.html#experience" class="btn btn-primary">All Experience</a>
+        <a href="experience-times-ooh.html" class="nav-link next">
+          <i class="fas fa-arrow-right"></i>
+          <span>Times OOH</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">AG</div>
+        <p class="copyright">&copy; 2025 Aaryaman Gadhavi. All Rights Reserved.</p>
+        <div class="footer-links">
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#research">Research</a>
+          <a href="../index.html#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/Users/aaryaman/Desktop/Website Claude/js/main.js"></script>
+</body>
+</html>

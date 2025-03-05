@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Times OOH Experience | Aaryaman Gadhavi</title>
+  <link rel="stylesheet" href="/Users/aaryaman/Desktop/Website Claude/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+  <!-- Additional CSS for experience pages -->
+  <style>
+    /* Experience page specific styles */
+    .experience-hero {
+      height: 50vh;
+      background-color: var(--color-bg-alt);
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-top: 60px;
+      margin-bottom: var(--space-lg);
+    }
+    
+    .experience-metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+      padding-bottom: var(--space-md);
+      border-bottom: 1px solid var(--color-border);
+    }
+    
+    .metadata-item {
+      flex: 1;
+      min-width: 150px;
+    }
+    
+    .metadata-item h4 {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-xs);
+      color: var(--color-text-light);
+    }
+    
+    .metadata-item p {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+    }
+    
+    .experience-section {
+      margin-bottom: var(--space-xl);
+    }
+    
+    .responsibilities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-lg);
+      margin: var(--space-lg) 0;
+    }
+    
+    .responsibility-card {
+      padding: var(--space-md);
+      border: 1px solid var(--color-border);
+      transition: all var(--transition-speed) ease;
+    }
+    
+    .responsibility-card:hover {
+      border-color: var(--color-accent);
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .responsibility-icon {
+      font-size: 2rem;
+      color: var(--color-accent);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .highlights-list {
+      margin: var(--space-md) 0;
+    }
+    
+    .highlights-list li {
+      position: relative;
+      padding-left: var(--space-md);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .highlights-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.7rem;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: var(--color-accent);
+    }
+    
+    .projects-related {
+      background-color: var(--color-bg-alt);
+      padding: var(--space-lg);
+      margin: var(--space-lg) 0;
+    }
+    
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-md);
+      margin-top: var(--space-lg);
+    }
+    
+    .project-item {
+      background-color: var(--color-white);
+      padding: var(--space-md);
+      border: 1px solid var(--color-border);
+      transition: all var(--transition-speed) ease;
+    }
+    
+    .project-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .project-item h4 {
+      margin-bottom: var(--space-xs);
+    }
+    
+    .project-meta {
+      font-size: 0.875rem;
+      color: var(--color-text-light);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .project-link {
+      display: inline-block;
+      margin-top: var(--space-sm);
+      font-family: var(--font-serif);
+      font-style: italic;
+    }
+    
+    .experience-navigation {
+      display: flex;
+      justify-content: space-between;
+      padding: var(--space-lg) 0;
+      border-top: 1px solid var(--color-border);
+    }
+    
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+    
+    .nav-link.next {
+      flex-direction: row-reverse;
+    }
+    
+    @media (max-width: 768px) {
+      .experience-hero {
+        height: 40vh;
+      }
+      
+      .experience-metadata {
+        grid-template-columns: 1fr;
+      }
+      
+      .responsibilities-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container header-content">
+      <div class="logo"><a href="../index.html">AG</a></div>
+      <nav id="desktop-nav">
+        <ul>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#experience" class="active">Experience</a></li>
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#research">Research</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="mobile-nav-toggle">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <nav id="mobile-nav">
+      <ul>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#experience" class="active">Experience</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#research">Research</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Experience Hero -->
+  <section class="experience-hero">
+    <div class="container">
+      <h1>Times OOH</h1>
+      <div class="subtitle">Sales & Marketing Intern | April 2023 - June 2023</div>
+    </div>
+  </section>
+
+  <!-- Experience Content -->
+  <section class="section-padding">
+    <div class="container">
+      <!-- Experience Metadata -->
+      <div class="experience-metadata">
+        <div class="metadata-item">
+          <h4>Company</h4>
+          <p>Times OOH</p>
+        </div>
+        <div class="metadata-item">
+          <h4>Position</h4>
+          <p>Sales & Marketing Intern</p>
+        </div>
+        <div class="metadata-item">
+          <h4>Duration</h4>
+          <p>April 2023 - June 2023</p>
+        </div>
+        <div class="metadata-item">
+          <h4>Location</h4>
+          <p>Kolkata, India</p>
+        </div>
+      </div>
+      
+      <!-- Company Overview -->
+      <div class="experience-section">
+        <h2>Company Overview</h2>
+        <p class="lead">Times OOH is India's leading Out-of-Home advertising company, managing premium advertising inventory across airports, metro, street furniture and other key transit environments.</p>
+        <p>As part of Bennett Coleman & Co. Ltd (The Times Group), Times OOH leverages its extensive media portfolio and deep understanding of the Indian market to offer innovative advertising solutions to brands. The company specializes in creating impactful OOH experiences that connect brands with their target audiences across high-traffic premium locations. Times OOH operates advertising solutions across major airports in India, including Mumbai, Delhi, Kolkata, and Bengaluru, helping brands maximize visibility among high-value audiences.</p>
+      </div>
+      
+      <!-- Role & Responsibilities -->
+      <div class="experience-section">
+        <h2>Role & Responsibilities</h2>
+        <p>As a Sales & Marketing Intern at Times OOH's Kolkata office, I spearheaded a strategic research project to identify the potential for local-to-local (L2L) sales in the Kolkata market, with a particular focus on airport advertising opportunities. This project involved comprehensive market analysis, client research, and development of actionable recommendations to improve market penetration.</p>
+        
+        <div class="responsibilities-grid">
+          <div class="responsibility-card">
+            <div class="responsibility-icon"><i class="fas fa-chart-bar"></i></div>
+            <h3>Market Research</h3>
+            <p>Developed and implemented a client scorecard methodology to evaluate advertising potential across various market sectors, analyzing marketing spends, OOH budgets, and fit for airport advertising.</p>
+          </div>
+          <div class="responsibility-card">
+            <div class="responsibility-icon"><i class="fas fa-users"></i></div>
+            <h3>Client Interviews</h3>
+            <p>Conducted in-depth interviews with 30+ local clients to understand their perceptions of airport advertising, uncovering barriers to adoption and identifying growth opportunities.</p>
+          </div>
+          <div class="responsibility-card">
+            <div class="responsibility-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+            <h3>Competitive Analysis</h3>
+            <p>Analyzed competitor strategies and pricing models to benchmark Kolkata airport advertising against other major airports, identifying key differentiators and value propositions.</p>
+          </div>
+          <div class="responsibility-card">
+            <div class="responsibility-icon"><i class="fas fa-lightbulb"></i></div>
+            <h3>Strategy Development</h3>
+            <p>Created comprehensive recommendations to improve market penetration, including tactical approaches for different industry sectors and innovative promotional strategies.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Key Achievements -->
+      <div class="experience-section">
+        <h2>Key Achievements</h2>
+        <ul class="highlights-list">
+          <li>Secured a <strong>Pre-Placement Offer (PPO)</strong> for exemplary performance, recognizing the strategic value of research findings and recommendations</li>
+          <li>Designed and implemented a <strong>quantitative client scorecard</strong> system that identified Real Estate as the highest potential sector, with over 50% of local clients having appropriate fit for airport advertising</li>
+          <li>Conducted comprehensive research covering <strong>30+ potential clients</strong> using a self-developed scorecard, allowing precise targeting of high-value prospects</li>
+          <li>Identified <strong>5 key perception barriers</strong> affecting local client adoption of airport advertising, including price perception, audience mismatches, and innovation concerns</li>
+          <li>Developed <strong>15+ actionable recommendations</strong> to improve market penetration, including sector-specific approaches, promotional tactics, and communication strategies</li>
+        </ul>
+      </div>
+      
+      <!-- Project Methodology -->
+      <div class="experience-section">
+        <h2>Project Methodology</h2>
+        <p>I employed a structured, data-driven approach to understand the Kolkata airport advertising market and develop actionable recommendations:</p>
+        
+        <div class="skills-detailed">
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h4>Client Scorecard Development</h4>
+              <ul>
+                <li>Created weighted evaluation criteria system</li>
+                <li>Developed metrics for marketing spend analysis</li>
+                <li>Established goodness of fit assessment parameters</li>
+                <li>Incorporated consistency and relationship factors</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h4>Market Data Collection</h4>
+              <ul>
+                <li>Questionnaire design for client interviews</li>
+                <li>Client database development and segmentation</li>
+                <li>In-depth interviews with potential clients</li>
+                <li>Quantitative analysis of market potential</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h4>Market Gap Analysis</h4>
+              <ul>
+                <li>Identification of perception challenges</li>
+                <li>Competitive positioning assessment</li>
+                <li>Opportunity mapping by industry sector</li>
+                <li>Audience alignment evaluation</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h4>Strategy Development</h4>
+              <ul>
+                <li>Data-driven recommendation formulation</li>
+                <li>Sector-specific tactical approach design</li>
+                <li>ROI demonstration frameworks</li>
+                <li>Marketing and promotional strategy innovation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Key Findings -->
+      <div class="experience-section">
+        <h2>Key Findings & Recommendations</h2>
+        <p>My research uncovered several important insights about the Kolkata airport advertising market:</p>
+        
+        <h3>Market Potential Findings</h3>
+        <ul class="highlights-list">
+          <li><strong>Sector Analysis:</strong> Real Estate emerged as the priority sector with the highest advertising potential, followed by Food & Beverages, while underrated sectors included Travel-Tourism and Health</li>
+          <li><strong>Client Demographics:</strong> 34-41 was identified as the most preferred target demographic among clients, with more clients preferring arrival zones over departure areas</li>
+          <li><strong>Market Penetration:</strong> Extrapolation of the research data indicated that approximately 50% of local clients in the database had suitable potential for airport advertising</li>
+          <li><strong>Market Expansion:</strong> Many local brands that had achieved national status were focusing on expansion outside Kolkata, creating new geographic targeting opportunities</li>
+        </ul>
+        
+        <h3>Challenge Identification</h3>
+        <ul class="highlights-list">
+          <li><strong>Price Perception:</strong> Local clients had a perception of high pricing that needed to be countered with value-oriented communication</li>
+          <li><strong>Target Audience Misconceptions:</strong> Many clients incorrectly believed their target audience was not present at the airport</li>
+          <li><strong>Innovation Perception:</strong> Clients perceived the Kolkata airport as not being sufficiently innovative compared to other metro airports</li>
+          <li><strong>Digital Concerns:</strong> Mental blocks existed regarding dwell time for Digital Out-of-Home (DOOH) properties</li>
+          <li><strong>Comparison Bias:</strong> Subconscious comparisons to Mumbai and Delhi airports created unfavorable perceptions that needed addressing</li>
+        </ul>
+        
+        <h3>Strategic Recommendations</h3>
+        <ul class="highlights-list">
+          <li><strong>Market Education:</strong> Create awareness campaigns highlighting that Kolkata airport advertising costs approximately 1/3 of Mumbai and Delhi rates</li>
+          <li><strong>Case Studies:</strong> Develop and promote success stories in pitch decks and through various media channels</li>
+          <li><strong>Data-Driven Approach:</strong> Release data about DOOH dwell times to correct client misperceptions</li>
+          <li><strong>Premium Client Strategy:</strong> Create a specialized program with special offers for high-potential clients</li>
+          <li><strong>Traffic Analysis:</strong> Implement seasonal analysis to target clients based on airport traffic patterns</li>
+          <li><strong>Expanded Inventory:</strong> Explore innovative spaces like aerobridges for advertising opportunities</li>
+        </ul>
+      </div>
+      
+      <!-- Related Projects -->
+      <div class="projects-related">
+        <h2>Related Projects</h2>
+        <p>During my internship at Times OOH, I worked on several key components of the market analysis project:</p>
+        
+        <div class="projects-grid">
+          <div class="project-item">
+            <h4>L2L Sales Potential Analysis</h4>
+            <div class="project-meta">Q2 2023</div>
+            <p>Conducted comprehensive market research to identify local-to-local sales potential for Kolkata airport advertising, including sector analysis and client scorecard development.</p>
+            <a href="project-l2l-sales.html" class="project-link">View Project Details →</a>
+          </div>
+          <div class="project-item">
+            <h4>Kolkata Airport Perception Study</h4>
+            <div class="project-meta">Q2 2023</div>
+            <p>Analyzed client perceptions of Kolkata airport advertising opportunities through structured interviews, identifying key barriers and opportunities for growth.</p>
+            <a href="project-airport-perception.html" class="project-link">View Project Details →</a>
+          </div>
+          <div class="project-item">
+            <h4>Market Penetration Strategy</h4>
+            <div class="project-meta">Q2 2023</div>
+            <p>Developed comprehensive recommendations to improve airport advertising adoption among local clients, including sector-specific approaches and promotional tactics.</p>
+            <a href="project-market-strategy.html" class="project-link">View Project Details →</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Skills Developed -->
+      <div class="experience-section">
+        <h2>Skills Developed</h2>
+        <p>My internship at Times OOH allowed me to develop and refine a diverse set of skills crucial for success in marketing and sales research:</p>
+        
+        <div class="skills-detailed">
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h4>Market Research</h4>
+              <ul>
+                <li>Quantitative Analysis</li>
+                <li>Client Scorecard Development</li>
+                <li>Interview Methodology</li>
+                <li>Market Potential Assessment</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h4>Sales & Marketing</h4>
+              <ul>
+                <li>Client Segmentation</li>
+                <li>Value Proposition Development</li>
+                <li>Media Marketing Strategy</li>
+                <li>B2B Pitch Development</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h4>OOH Advertising</h4>
+              <ul>
+                <li>Airport Media Understanding</li>
+                <li>OOH Media Evaluation</li>
+                <li>Advertising ROI Analysis</li>
+                <li>Media Inventory Assessment</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h4>Strategic Thinking</h4>
+              <ul>
+                <li>Data-Driven Recommendation Development</li>
+                <li>Problem Identification</li>
+                <li>Solution Framework Creation</li>
+                <li>Presentation of Complex Findings</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Testimonial -->
+      <div class="experience-section">
+        <h2>Leadership Testimonial</h2>
+        <blockquote>
+          "Aaryaman demonstrated exceptional analytical skills and strategic thinking throughout his internship. His comprehensive research on the Kolkata airport advertising market provided valuable insights that directly influenced our local sales strategy. His ability to identify sector-specific opportunities and develop actionable recommendations was particularly impressive, earning him a well-deserved pre-placement offer."
+          <cite>— Aman Nanda, Chief Strategy Officer, Times OOH</cite>
+        </blockquote>
+      </div>
+      
+      <!-- Experience Navigation -->
+      <div class="experience-navigation">
+        <a href="experience-cee.html" class="nav-link prev">
+          <i class="fas fa-arrow-left"></i>
+          <span>Centre for Environment Education</span>
+        </a>
+        <a href="../index.html#experience" class="btn btn-primary">All Experience</a>
+        <a href="experience-lenskart.html" class="nav-link next">
+          <i class="fas fa-arrow-right"></i>
+          <span>Lenskart</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">AG</div>
+        <p class="copyright">&copy; 2025 Aaryaman Gadhavi. All Rights Reserved.</p>
+        <div class="footer-links">
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#research">Research</a>
+          <a href="../index.html#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/Users/aaryaman/Desktop/Website Claude/js/main.js"></script>
+</body>
+</html>

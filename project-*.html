@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Name | Aaryaman Gadhavi</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <!-- Additional CSS for project pages -->
+  <style>
+    /* Project-specific styles */
+    .project-hero {
+      height: 50vh;
+      background-color: var(--color-bg-alt);
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-top: 60px;
+      margin-bottom: var(--space-lg);
+    }
+    
+    .project-metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+      padding-bottom: var(--space-md);
+      border-bottom: 1px solid var(--color-border);
+    }
+    
+    .metadata-item {
+      flex: 1;
+      min-width: 150px;
+    }
+    
+    .metadata-item h4 {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-xs);
+      color: var(--color-text-light);
+    }
+    
+    .metadata-item p {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+    }
+    
+    .project-section {
+      margin-bottom: var(--space-xl);
+    }
+    
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-md);
+      margin: var(--space-lg) 0;
+    }
+    
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 3/2;
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-speed) ease;
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.03);
+    }
+    
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--space-md);
+      margin: var(--space-lg) 0;
+    }
+    
+    .result-card {
+      padding: var(--space-md);
+      border: 1px solid var(--color-border);
+      text-align: center;
+    }
+    
+    .result-value {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: var(--color-accent);
+      margin-bottom: var(--space-xs);
+    }
+    
+    .result-label {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    .project-navigation {
+      display: flex;
+      justify-content: space-between;
+      padding: var(--space-lg) 0;
+      border-top: 1px solid var(--color-border);
+    }
+    
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+    
+    .nav-link.next {
+      flex-direction: row-reverse;
+    }
+    
+    @media (max-width: 768px) {
+      .project-hero {
+        height: 40vh;
+      }
+      
+      .project-metadata {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container header-content">
+      <div class="logo"><a href="index.html">AG</a></div>
+      <nav id="desktop-nav">
+        <ul>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#experience">Experience</a></li>
+          <li><a href="index.html#projects" class="active">Projects</a></li>
+          <li><a href="index.html#research">Research</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="mobile-nav-toggle">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <nav id="mobile-nav">
+      <ul>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#projects" class="active">Projects</a></li>
+        <li><a href="index.html#research">Research</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Project Hero -->
+  <section class="project-hero">
+    <div class="container">
+      <h1>Project Title</h1>
+      <div class="subtitle">The Baker's Dozen | Q3 2024</div>
+    </div>
+  </section>
+
+  <!-- Project Content -->
+  <section class="section-padding">
+    <div class="container">
+      <!-- Project Metadata -->
+      <div class="project-metadata">
+        <div class="metadata-item">
+          <h4>Client</h4>
+          <p>The Baker's Dozen</p>
+        </div>
+        <div class="metadata-item">
+          <h4>Timeline</h4>
+          <p>July - September 2024</p>
+        </div>
+        <div class="metadata-item">
+          <h4>Role</h4>
+          <p>Marketing Lead</p>
+        </div>
+        <div class="metadata-item">
+          <h4>Focus</h4>
+          <p>Brand Awareness, Sales Growth</p>
+        </div>
+      </div>
+      
+      <!-- Project Overview -->
+      <div class="project-section">
+        <h2>Overview</h2>
+        <p class="lead">Brief description of the project highlighting key achievements and objectives.</p>
+        <p>More detailed explanation of the project context, goals, and significance. This section should provide enough background for the reader to understand the importance of the work that was done.</p>
+      </div>
+      
+      <!-- Challenge Section -->
+      <div class="project-section">
+        <h2>The Challenge</h2>
+        <p>Description of the problem or opportunity that needed to be addressed. What were the specific challenges faced? What were the market conditions or business needs that prompted this project?</p>
+        
+        <ul>
+          <li>Challenge point 1</li>
+          <li>Challenge point 2</li>
+          <li>Challenge point 3</li>
+        </ul>
+      </div>
+      
+      <!-- Approach Section -->
+      <div class="project-section">
+        <h2>Approach & Strategy</h2>
+        <p>Explanation of the strategic thinking and methodology employed to address the challenge. How was the problem analyzed? What insights guided the development of the solution?</p>
+        
+        <div class="project-gallery">
+          <div class="gallery-item">
+            <!-- Placeholder for project image -->
+            <img src="assets/placeholder-gallery1.jpg" alt="Strategy Session">
+          </div>
+          <div class="gallery-item">
+            <!-- Placeholder for project image -->
+            <img src="assets/placeholder-gallery2.jpg" alt="Market Research">
+          </div>
+          <div class="gallery-item">
+            <!-- Placeholder for project image -->
+            <img src="assets/placeholder-gallery3.jpg" alt="Concept Development">
+          </div>
+        </div>
+        
+        <h3>Key Strategic Elements</h3>
+        <ol>
+          <li>
+            <strong>Strategy Element 1</strong>
+            <p>Description of the first key strategic element and its importance.</p>
+          </li>
+          <li>
+            <strong>Strategy Element 2</strong>
+            <p>Description of the second key strategic element and its importance.</p>
+          </li>
+          <li>
+            <strong>Strategy Element 3</strong>
+            <p>Description of the third key strategic element and its importance.</p>
+          </li>
+        </ol>
+      </div>
+      
+      <!-- Execution Section -->
+      <div class="project-section">
+        <h2>Execution</h2>
+        <p>Details of how the strategy was implemented. What specific actions were taken? How were resources coordinated? What timeline was followed?</p>
+        
+        <h3>Implementation Phases</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">Phase 1: Research & Planning</div>
+            <div class="timeline-content">
+              <p>Description of the first implementation phase and key activities.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Phase 2: Creative Development</div>
+            <div class="timeline-content">
+              <p>Description of the second implementation phase and key activities.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Phase 3: Campaign Launch</div>
+            <div class="timeline-content">
+              <p>Description of the third implementation phase and key activities.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Phase 4: Optimization & Scaling</div>
+            <div class="timeline-content">
+              <p>Description of the fourth implementation phase and key activities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Results Section -->
+      <div class="project-section">
+        <h2>Results & Impact</h2>
+        <p>Presentation of the measurable outcomes achieved through the project. How did the solution address the initial challenge? What quantifiable results were obtained?</p>
+        
+        <div class="results-grid">
+          <div class="result-card">
+            <div class="result-value">200%</div>
+            <div class="result-label">YoY Sales Increase</div>
+          </div>
+          <div class="result-card">
+            <div class="result-value">4.5M</div>
+            <div class="result-label">Reach</div>
+          </div>
+          <div class="result-card">
+            <div class="result-value">15%</div>
+            <div class="result-label">Brand Awareness Growth</div>
+          </div>
+          <div class="result-card">
+            <div class="result-value">50%</div>
+            <div class="result-label">Engagement Increase</div>
+          </div>
+        </div>
+        
+        <blockquote>
+          "Client testimonial or quote about the success of the project and its impact on their business objectives."
+          <cite>— Client Name, Position, Company</cite>
+        </blockquote>
+      </div>
+      
+      <!-- Key Learnings Section -->
+      <div class="project-section">
+        <h2>Key Learnings</h2>
+        <p>Reflection on the insights gained from the project. What worked well? What could have been improved? What valuable lessons were learned?</p>
+        
+        <div class="learning-points">
+          <div class="learning-point">
+            <h3>Learning 1</h3>
+            <p>Description of the first key learning and its implications for future projects.</p>
+          </div>
+          <div class="learning-point">
+            <h3>Learning 2</h3>
+            <p>Description of the second key learning and its implications for future projects.</p>
+          </div>
+          <div class="learning-point">
+            <h3>Learning 3</h3>
+            <p>Description of the third key learning and its implications for future projects.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Project Navigation -->
+      <div class="project-navigation">
+        <a href="#" class="nav-link prev">
+          <i class="fas fa-arrow-left"></i>
+          <span>Previous Project</span>
+        </a>
+        <a href="index.html#projects" class="btn btn-primary">All Projects</a>
+        <a href="#" class="nav-link next">
+          <i class="fas fa-arrow-right"></i>
+          <span>Next Project</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">AG</div>
+        <p class="copyright">&copy; 2025 Aaryaman Gadhavi. All Rights Reserved.</p>
+        <div class="footer-links">
+          <a href="index.html#about">About</a>
+          <a href="index.html#experience">Experience</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#research">Research</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

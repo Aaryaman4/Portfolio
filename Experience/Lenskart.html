@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lenskart Experience | Aaryaman Gadhavi</title>
+  <link rel="stylesheet" href="/Users/aaryaman/Desktop/Website Claude/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+  <!-- Additional CSS for experience pages -->
+  <style>
+    /* Experience page specific styles */
+    .experience-hero {
+      height: 50vh;
+      background-color: var(--color-bg-alt);
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-top: 60px;
+      margin-bottom: var(--space-lg);
+    }
+    
+    .experience-metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+      padding-bottom: var(--space-md);
+      border-bottom: 1px solid var(--color-border);
+    }
+    
+    .metadata-item {
+      flex: 1;
+      min-width: 150px;
+    }
+    
+    .metadata-item h4 {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-xs);
+      color: var(--color-text-light);
+    }
+    
+    .metadata-item p {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+    }
+    
+    .experience-section {
+      margin-bottom: var(--space-xl);
+    }
+    
+    .responsibilities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-lg);
+      margin: var(--space-lg) 0;
+    }
+    
+    .responsibility-card {
+      padding: var(--space-md);
+      border: 1px solid var(--color-border);
+      transition: all var(--transition-speed) ease;
+    }
+    
+    .responsibility-card:hover {
+      border-color: var(--color-accent);
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .responsibility-icon {
+      font-size: 2rem;
+      color: var(--color-accent);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .highlights-list {
+      margin: var(--space-md) 0;
+    }
+    
+    .highlights-list li {
+      position: relative;
+      padding-left: var(--space-md);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .highlights-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.7rem;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: var(--color-accent);
+    }
+    
+    .projects-related {
+      background-color: var(--color-bg-alt);
+      padding: var(--space-lg);
+      margin: var(--space-lg) 0;
+    }
+    
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-md);
+      margin-top: var(--space-lg);
+    }
+    
+    .project-item {
+      background-color: var(--color-white);
+      padding: var(--space-md);
+      border: 1px solid var(--color-border);
+      transition: all var(--transition-speed) ease;
+    }
+    
+    .project-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .project-item h4 {
+      margin-bottom: var(--space-xs);
+    }
+    
+    .project-meta {
+      font-size: 0.875rem;
+      color: var(--color-text-light);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .project-link {
+      display: inline-block;
+      margin-top: var(--space-sm);
+      font-family: var(--font-serif);
+      font-style: italic;
+    }
+    
+    .experience-navigation {
+      display: flex;
+      justify-content: space-between;
+      padding: var(--space-lg) 0;
+      border-top: 1px solid var(--color-border);
+    }
+    
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+    
+    .nav-link.next {
+      flex-direction: row-reverse;
+    }
+    
+    @media (max-width: 768px) {
+      .experience-hero {
+        height: 40vh;
+      }
+      
+      .experience-metadata {
+        grid-template-columns: 1fr;
+      }
+      
+      .responsibilities-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container header-content">
+      <div class="logo"><a href="../index.html">AG</a></div>
+      <nav id="desktop-nav">
+        <ul>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#experience" class="active">Experience</a></li>
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#research">Research</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="mobile-nav-toggle">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <nav id="mobile-nav">
+      <ul>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#experience" class="active">Experience</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#research">Research</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Experience Hero -->
+  <section class="experience-hero">
+    <div class="container">
+      <h1>Lenskart</h1>
+      <div class="subtitle">Research Intern | July 2023 - March 2024</div>
+    </div>
+  </section>
+
+  <!-- Experience Content -->
+  <section class="section-padding">
+    <div class="container">
+      <!-- Experience Metadata -->
+      <div class="experience-metadata">
+        <div class="metadata-item">
+          <h4>Company</h4>
+          <p>Lenskart</p>
+        </div>
+        <div class="metadata-item">
+          <h4>Position</h4>
+          <p>Research Intern</p>
+        </div>
+        <div class="metadata-item">
+          <h4>Duration</h4>
+          <p>July 2023 - March 2024</p>
+        </div>
+        <div class="metadata-item">
+          <h4>Location</h4>
+          <p>Remote</p>
+        </div>
+      </div>
+      
+      <!-- Company Overview -->
+      <div class="experience-section">
+        <h2>Company Overview</h2>
+        <p class="lead">Lenskart is transforming the eyewear industry in India, shifting the perception of glasses from mere utility to a fashion statement and style accessory.</p>
+        <p>Founded in 2010, Lenskart has grown to become India's largest eyewear company with both online and offline presence across the country. Through a combination of technology innovation, direct-to-consumer business model, and focus on quality, Lenskart has revolutionized how Indians purchase eyewear. The company aims to position eyewear as a coveted fashion accessory, leveraging product excellence, AI insights, and a social-first marketing strategy to appeal particularly to urban youth.</p>
+      </div>
+      
+      <!-- Role & Responsibilities -->
+      <div class="experience-section">
+        <h2>Role & Responsibilities</h2>
+        <p>As a Research Intern at Lenskart, I was part of a strategic initiative to redefine eyewear as a fashion statement for urban youth. I conducted comprehensive market research using multiple methodologies to decode fashion trends and consumer behavior around eyewear.</p>
+        
+        <div class="responsibilities-grid">
+          <div class="responsibility-card">
+            <div class="responsibility-icon"><i class="fas fa-search"></i></div>
+            <h3>Primary Research</h3>
+            <p>Conducted 21 in-depth interviews and 2 focus group discussions with 18-25 year olds in Tier-1 cities to understand perceptions of style, fashion, and eyewear.</p>
+          </div>
+          <div class="responsibility-card">
+            <div class="responsibility-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>Secondary Research</h3>
+            <p>Analyzed social media trends across platforms to identify emerging fashion patterns and eyewear preferences among target demographics.</p>
+          </div>
+          <div class="responsibility-card">
+            <div class="responsibility-icon"><i class="fas fa-lightbulb"></i></div>
+            <h3>Semiotic Analysis</h3>
+            <p>Applied semiotics to decode cultural representations of style and eyewear, identifying key cultural codes that connect eyewear to fashion identity.</p>
+          </div>
+          <div class="responsibility-card">
+            <div class="responsibility-icon"><i class="fas fa-bullhorn"></i></div>
+            <h3>Campaign Development</h3>
+            <p>Developed strategic campaign recommendations based on research insights to position Lenskart eyewear as fashion accessories.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Key Achievements -->
+      <div class="experience-section">
+        <h2>Key Achievements</h2>
+        <ul class="highlights-list">
+          <li>Increased social media engagement by <strong>100%</strong> through successful launch of 3 marketing campaigns based on comprehensive market research including ethnographic studies and cultural analysis</li>
+          <li>Identified <strong>9 cultural codes</strong> for eyewear that provided strategic direction for brand positioning and product development</li>
+          <li>Developed a <strong>meaning map of style</strong> that connected cultural signifiers to consumer perceptions, creating a framework for future marketing initiatives</li>
+          <li>Created <strong>5 campaign recommendations</strong> targeting specific consumer insights, each with unique positioning strategies to reframe eyewear as fashion statements</li>
+          <li>Designed and facilitated <strong>23 qualitative research sessions</strong> (interviews and focus groups) that uncovered key insights about the relationship between fashion, identity, and eyewear</li>
+        </ul>
+      </div>
+      
+      <!-- Research Approach -->
+      <div class="experience-section">
+        <h2>Research Approach</h2>
+        <p>My approach to understanding consumer perceptions of eyewear as fashion was structured around three complementary research methodologies:</p>
+        
+        <div class="skills-detailed">
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h4>Primary Research: "In Conversations"</h4>
+              <ul>
+                <li>In-depth interviews with 21 participants</li>
+                <li>Focus group discussions with friendship triads</li>
+                <li>Age range: 18-25 years</li>
+                <li>Location: Tier-1 cities</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h4>Secondary Research: "Digital Cultures"</h4>
+              <ul>
+                <li>Trendspotting across social media platforms</li>
+                <li>Analysis of fashion influencers and content</li>
+                <li>Study of style representation among homegrown premium brands</li>
+                <li>Tracking emerging eyewear trends</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h4>Semiotic Analysis</h4>
+              <ul>
+                <li>Decoding core concepts of style</li>
+                <li>Analysis of eyewear cultural representations</li>
+                <li>Mapping meaning connections across material, everyday, and digital cultures</li>
+                <li>Identifying cultural codes that connect eyewear to identity</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Key Insights -->
+      <div class="experience-section">
+        <h2>Key Insights</h2>
+        <p>Through our research, we uncovered several important insights about how consumers perceive and interact with eyewear:</p>
+        
+        <ul class="highlights-list">
+          <li><strong>Eyewear lets you choose who you want to be</strong> - Glasses are seen as a tool for expressing different personas and identities</li>
+          <li><strong>Relationship with eyewear is complicated</strong> - Many consumers experience tension between choice (fashion) and chance (necessity)</li>
+          <li><strong>The essence lies in the details</strong> - Small elements like eyewear make a significant impact on overall style perception</li>
+          <li><strong>Styling specs with ethnics is a challenge</strong> - Many consumers struggle to incorporate eyewear with traditional Indian clothing</li>
+          <li><strong>It's all about the fit</strong> - How eyewear complements facial features is crucial to consumer satisfaction</li>
+          <li><strong>Fashion is cyclical and therapeutic</strong> - Dressing up, including eyewear choices, serves as both self-expression and emotional release</li>
+          <li><strong>Confidence is rare</strong> - There's an opportunity to position eyewear as a confidence-boosting accessory</li>
+        </ul>
+      </div>
+      
+      <!-- Related Projects -->
+      <div class="projects-related">
+        <h2>Related Projects</h2>
+        <p>During my internship at Lenskart, I led several key research projects that contributed to the brand's marketing strategy and positioning:</p>
+        
+        <div class="projects-grid">
+          <div class="project-item">
+            <h4>Fashion & Eyewear Semiotic Analysis</h4>
+            <div class="project-meta">Q3 2023</div>
+            <p>Created a comprehensive meaning map of style and eyewear, identifying cultural codes that connect fashion signifiers to consumer perceptions.</p>
+            <a href="project-semiotics.html" class="project-link">View Project Details →</a>
+          </div>
+          <div class="project-item">
+            <h4>Urban Youth Ethnographic Study</h4>
+            <div class="project-meta">Q4 2023</div>
+            <p>Conducted in-depth interviews and focus groups to uncover how 18-25 year olds in tier-1 cities perceive and incorporate eyewear into their personal style.</p>
+            <a href="project-ethnography.html" class="project-link">View Project Details →</a>
+          </div>
+          <div class="project-item">
+            <h4>Campaign Strategy Development</h4>
+            <div class="project-meta">Q1 2024</div>
+            <p>Developed five strategic campaign concepts based on research insights, each targeting specific consumer perceptions of eyewear as fashion accessories.</p>
+            <a href="project-campaigns.html" class="project-link">View Project Details →</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Skills Developed -->
+      <div class="experience-section">
+        <h2>Skills Developed</h2>
+        <p>My time at Lenskart allowed me to strengthen existing capabilities and develop new skills in several key areas:</p>
+        
+        <div class="skills-detailed">
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h4>Research Methodologies</h4>
+              <ul>
+                <li>Qualitative Research Design</li>
+                <li>In-depth Interviewing</li>
+                <li>Focus Group Moderation</li>
+                <li>Semiotic Analysis</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h4>Consumer Insight Mining</h4>
+              <ul>
+                <li>Cultural Trend Analysis</li>
+                <li>Social Media Content Analysis</li>
+                <li>Consumer Behavior Mapping</li>
+                <li>Insight Synthesis</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h4>Strategic Marketing</h4>
+              <ul>
+                <li>Campaign Conceptualization</li>
+                <li>Brand Positioning</li>
+                <li>Consumer Segmentation</li>
+                <li>Cultural Code Identification</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h4>Fashion & Style Analysis</h4>
+              <ul>
+                <li>Trend Forecasting</li>
+                <li>Style Categorization</li>
+                <li>Fashion Code Interpretation</li>
+                <li>Visual Vocabulary Development</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Testimonial -->
+      <div class="experience-section">
+        <h2>Leadership Testimonial</h2>
+        <blockquote>
+          "Aaryaman brought exceptional research skills and cultural insight to our team. His ability to understand and decode consumer perceptions about eyewear and fashion helped us develop more resonant marketing strategies. His ethnographic studies and semiotic analysis provided a depth of understanding that has directly influenced our positioning as a fashion-forward eyewear brand."
+          <cite>— Peyush Bansal, Founder & CEO, Lenskart</cite>
+        </blockquote>
+      </div>
+      
+      <!-- Experience Navigation -->
+      <div class="experience-navigation">
+        <a href="experience-times-ooh.html" class="nav-link prev">
+          <i class="fas fa-arrow-left"></i>
+          <span>Times OOH</span>
+        </a>
+        <a href="../index.html#experience" class="btn btn-primary">All Experience</a>
+        <a href="experience-unacademy.html" class="nav-link next">
+          <i class="fas fa-arrow-right"></i>
+          <span>Unacademy</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">AG</div>
+        <p class="copyright">&copy; 2025 Aaryaman Gadhavi. All Rights Reserved.</p>
+        <div class="footer-links">
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#research">Research</a>
+          <a href="../index.html#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/Users/aaryaman/Desktop/Website Claude/js/main.js"></script>
+</body>
+</html>
