@@ -7,6 +7,174 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <style>
+    /* Additional styles for the revamped about page */
+    .about-detailed {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    .about-image {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .about-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .about-bio {
+      flex: 2;
+      min-width: 300px;
+    }
+    
+    .about-philosophy {
+      margin-top: 2rem;
+    }
+    
+    .philosophy-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .philosophy-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .philosophy-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    
+    .philosophy-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #000000;
+    }
+    
+    .education-timeline {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .education-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    
+    .education-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .education-header {
+      background: #000000;
+      color: white;
+      padding: 1rem 1.5rem;
+    }
+    
+    .education-content {
+      padding: 1.5rem;
+    }
+    
+    .institution {
+      color: #666;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+    
+    .highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    
+    .highlight-item {
+      background: #f0f8ff;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+    }
+    
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .skill-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    
+    .skill-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .skill-card h4 {
+      margin-top: 0;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #000000;
+      margin-bottom: 1rem;
+    }
+    
+    .skill-card ul {
+      padding-left: 1.2rem;
+    }
+    
+    .skill-card li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .cta-section {
+      background: #f8f9fa;
+      border-radius: 10px;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    
+    .btn-primary {
+      background: #000000;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: A25px;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 1rem;
+      transition: background 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      background: accent;
+    }
+
+    .skills-detailed {
+  margin-top: 4rem;
+}
+
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -68,23 +236,19 @@
           
           <div class="about-philosophy">
             <h3>My Philosophy</h3>
-            <div class="philosophy-item">
-              <div class="philosophy-icon"><i class="fas fa-lightbulb"></i></div>
-              <div class="philosophy-content">
+            <div class="philosophy-cards">
+              <div class="philosophy-card">
+                <div class="philosophy-icon"><i class="fas fa-lightbulb"></i></div>
                 <h4>Research-Driven Innovation</h4>
                 <p>I believe in grounding creative decisions in solid consumer research and market insights to ensure strategies are both innovative and effective.</p>
               </div>
-            </div>
-            <div class="philosophy-item">
-              <div class="philosophy-icon"><i class="fas fa-chart-line"></i></div>
-              <div class="philosophy-content">
+              <div class="philosophy-card">
+                <div class="philosophy-icon"><i class="fas fa-chart-line"></i></div>
                 <h4>Measurable Results</h4>
                 <p>Every marketing initiative should be tied to clear KPIs and measurable outcomes that demonstrate real business impact.</p>
               </div>
-            </div>
-            <div class="philosophy-item">
-              <div class="philosophy-icon"><i class="fas fa-users"></i></div>
-              <div class="philosophy-content">
+              <div class="philosophy-card">
+                <div class="philosophy-icon"><i class="fas fa-users"></i></div>
                 <h4>Consumer-Centricity</h4>
                 <p>Putting consumer needs and behaviors at the center of all brand and marketing decisions ensures relevance and resonance.</p>
               </div>
@@ -97,29 +261,29 @@
         <h3>Education</h3>
         <div class="education-timeline">
           <div class="education-card">
-            <div class="education-year">2022 - 2024</div>
-            <div class="education-content">
+            <div class="education-header">
               <h4>PGDM - C</h4>
+              <div class="education-year">2022 - 2024</div>
+            </div>
+            <div class="education-content">
               <div class="institution">MICA, Ahmedabad</div>
               <p>Specialized in marketing communications with focus on brand strategy, consumer behavior analysis, and digital marketing. Participated in research projects examining emerging consumer trends in the Indian market.</p>
               <div class="highlights">
                 <div class="highlight-item">GPA: 3/4</div>
-                <div class="highlight-item">Brand Management Association Member</div>
-                <div class="highlight-item">Marketing Research Club President</div>
               </div>
             </div>
           </div>
           
           <div class="education-card">
-            <div class="education-year">2019 - 2022</div>
-            <div class="education-content">
+            <div class="education-header">
               <h4>Bachelor of Business Administration</h4>
+              <div class="education-year">2019 - 2022</div>
+            </div>
+            <div class="education-content">
               <div class="institution">IMNU, Nirma University</div>
               <p>Built a strong foundation in business principles with emphasis on marketing strategies and business analytics. Completed coursework in market research, consumer psychology, and advertising principles.</p>
               <div class="highlights">
                 <div class="highlight-item">GPA: 8/10</div>
-                <div class="highlight-item">Marketing Society Executive Member</div>
-                <div class="highlight-item">Best Undergraduate Project Award</div>
               </div>
             </div>
           </div>
@@ -129,7 +293,7 @@
       <div class="skills-detailed">
         <h3>Skills & Expertise</h3>
         <div class="skills-grid">
-          <div class="skill-category">
+          <div class="skill-card">
             <h4>Brand Strategy</h4>
             <ul>
               <li>Brand Positioning & Architecture</li>
@@ -139,7 +303,7 @@
               <li>Brand Equity Measurement</li>
             </ul>
           </div>
-          <div class="skill-category">
+          <div class="skill-card">
             <h4>Digital Marketing</h4>
             <ul>
               <li>Content Strategy</li>
@@ -149,7 +313,7 @@
               <li>SEO Fundamentals</li>
             </ul>
           </div>
-          <div class="skill-category">
+          <div class="skill-card">
             <h4>Market Research</h4>
             <ul>
               <li>Quantitative & Qualitative Research</li>
@@ -159,7 +323,7 @@
               <li>Consumer Insights</li>
             </ul>
           </div>
-          <div class="skill-category">
+          <div class="skill-card">
             <h4>Project Management</h4>
             <ul>
               <li>Cross-functional Coordination</li>
