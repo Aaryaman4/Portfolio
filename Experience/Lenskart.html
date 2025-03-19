@@ -169,6 +169,144 @@
         grid-template-columns: 1fr;
       }
     }
+
+    .methodology-flowchart {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin: var(--space-lg) 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.methodology-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.methodology-card {
+  width: 100%;
+  padding: var(--space-md) var(--space-lg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--color-bg-alt);
+  position: relative;
+  transition: all var(--transition-speed) ease;
+}
+
+.methodology-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border-color: var(--color-accent);
+}
+
+.step-number {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--color-accent);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.methodology-card h3 {
+  margin-bottom: var(--space-sm);
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.methodology-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-sm);
+}
+
+.methodology-item {
+  padding: var(--space-xs) var(--space-sm);
+  background-color: white;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  border-left: 3px solid var(--color-accent);
+}
+
+.flow-arrow {
+  margin: var(--space-sm) 0;
+  color: var(--color-accent);
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .methodology-items {
+    grid-template-columns: 1fr;
+  }
+}
+    .skills-cards {
+  margin-top: var(--space-md);
+}
+
+.skills-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.skill-card {
+  background-color: var(--color-bg-alt);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 4px;
+  font-size: 0.95rem;
+  transition: all var(--transition-speed) ease;
+  border: 1px solid var(--color-border);
+}
+
+.skill-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  border-color: var(--color-accent);
+}
+
+.skill-category {
+  margin-bottom: var(--space-md);
+}
+
+.skill-category h4 {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-xs);
+  color: var(--color-text);
+  position: relative;
+  padding-left: var(--space-sm);
+}
+
+.skill-category h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 18px;
+  background-color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .skills-card-container {
+    flex-direction: column;
+  }
+  
+  .skill-card {
+    width: 100%;
+  }
+}
+    
   </style>
 </head>
 <body>
@@ -284,42 +422,56 @@
       </div>
       
       <!-- Research Approach -->
-      <div class="experience-section">
-        <h2>Research Approach</h2>
-        <p>My approach to understanding consumer perceptions of eyewear as fashion was structured around three complementary research methodologies:</p>
-        
-        <div class="skills-detailed">
-          <div class="skills-grid">
-            <div class="skill-category">
-              <h4>Primary Research: "In Conversations"</h4>
-              <ul>
-                <li>In-depth interviews with 21 participants</li>
-                <li>Focus group discussions with friendship triads</li>
-                <li>Age range: 18-25 years</li>
-                <li>Location: Tier-1 cities</li>
-              </ul>
-            </div>
-            <div class="skill-category">
-              <h4>Secondary Research: "Digital Cultures"</h4>
-              <ul>
-                <li>Trendspotting across social media platforms</li>
-                <li>Analysis of fashion influencers and content</li>
-                <li>Study of style representation among homegrown premium brands</li>
-                <li>Tracking emerging eyewear trends</li>
-              </ul>
-            </div>
-            <div class="skill-category">
-              <h4>Semiotic Analysis</h4>
-              <ul>
-                <li>Decoding core concepts of style</li>
-                <li>Analysis of eyewear cultural representations</li>
-                <li>Mapping meaning connections across material, everyday, and digital cultures</li>
-                <li>Identifying cultural codes that connect eyewear to identity</li>
-              </ul>
-            </div>
-          </div>
+<div class="experience-section">
+  <h2>Research Approach</h2>
+  <p>My approach to understanding consumer perceptions of eyewear as fashion was structured around three complementary research methodologies:</p>
+  
+  <div class="methodology-flowchart">
+    <!-- Step 1 -->
+    <div class="methodology-step">
+      <div class="methodology-card">
+        <div class="step-number">1</div>
+        <h3>Primary Research: "In Conversations"</h3>
+        <div class="methodology-items">
+          <div class="methodology-item">In-depth interviews with 21 participants</div>
+          <div class="methodology-item">Focus group discussions with friendship triads</div>
+          <div class="methodology-item">Age range: 18-25 years</div>
+          <div class="methodology-item">Location: Tier-1 cities</div>
         </div>
       </div>
+      <div class="flow-arrow"><i class="fas fa-long-arrow-alt-down"></i></div>
+    </div>
+    
+    <!-- Step 2 -->
+    <div class="methodology-step">
+      <div class="methodology-card">
+        <div class="step-number">2</div>
+        <h3>Secondary Research: "Digital Cultures"</h3>
+        <div class="methodology-items">
+          <div class="methodology-item">Trendspotting across social media platforms</div>
+          <div class="methodology-item">Analysis of fashion influencers and content</div>
+          <div class="methodology-item">Study of style representation among homegrown premium brands</div>
+          <div class="methodology-item">Tracking emerging eyewear trends</div>
+        </div>
+      </div>
+      <div class="flow-arrow"><i class="fas fa-long-arrow-alt-down"></i></div>
+    </div>
+    
+    <!-- Step 3 -->
+    <div class="methodology-step">
+      <div class="methodology-card">
+        <div class="step-number">3</div>
+        <h3>Semiotic Analysis</h3>
+        <div class="methodology-items">
+          <div class="methodology-item">Decoding core concepts of style</div>
+          <div class="methodology-item">Analysis of eyewear cultural representations</div>
+          <div class="methodology-item">Mapping meaning connections across material, everyday, and digital cultures</div>
+          <div class="methodology-item">Identifying cultural codes that connect eyewear to identity</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
       
       <!-- Key Insights -->
       <div class="experience-section">
@@ -347,87 +499,82 @@
             <h4>Fashion & Eyewear Semiotic Analysis</h4>
             <div class="project-meta">Q3 2023</div>
             <p>Created a comprehensive meaning map of style and eyewear, identifying cultural codes that connect fashion signifiers to consumer perceptions.</p>
-            <a href="project-semiotics.html" class="project-link">View Project Details →</a>
           </div>
           <div class="project-item">
             <h4>Urban Youth Ethnographic Study</h4>
             <div class="project-meta">Q4 2023</div>
             <p>Conducted in-depth interviews and focus groups to uncover how 18-25 year olds in tier-1 cities perceive and incorporate eyewear into their personal style.</p>
-            <a href="project-ethnography.html" class="project-link">View Project Details →</a>
           </div>
           <div class="project-item">
             <h4>Campaign Strategy Development</h4>
             <div class="project-meta">Q1 2024</div>
             <p>Developed five strategic campaign concepts based on research insights, each targeting specific consumer perceptions of eyewear as fashion accessories.</p>
-            <a href="project-campaigns.html" class="project-link">View Project Details →</a>
           </div>
         </div>
       </div>
       
       <!-- Skills Developed -->
-      <div class="experience-section">
-        <h2>Skills Developed</h2>
-        <p>My time at Lenskart allowed me to strengthen existing capabilities and develop new skills in several key areas:</p>
-        
-        <div class="skills-detailed">
-          <div class="skills-grid">
-            <div class="skill-category">
-              <h4>Research Methodologies</h4>
-              <ul>
-                <li>Qualitative Research Design</li>
-                <li>In-depth Interviewing</li>
-                <li>Focus Group Moderation</li>
-                <li>Semiotic Analysis</li>
-              </ul>
-            </div>
-            <div class="skill-category">
-              <h4>Consumer Insight Mining</h4>
-              <ul>
-                <li>Cultural Trend Analysis</li>
-                <li>Social Media Content Analysis</li>
-                <li>Consumer Behavior Mapping</li>
-                <li>Insight Synthesis</li>
-              </ul>
-            </div>
-            <div class="skill-category">
-              <h4>Strategic Marketing</h4>
-              <ul>
-                <li>Campaign Conceptualization</li>
-                <li>Brand Positioning</li>
-                <li>Consumer Segmentation</li>
-                <li>Cultural Code Identification</li>
-              </ul>
-            </div>
-            <div class="skill-category">
-              <h4>Fashion & Style Analysis</h4>
-              <ul>
-                <li>Trend Forecasting</li>
-                <li>Style Categorization</li>
-                <li>Fashion Code Interpretation</li>
-                <li>Visual Vocabulary Development</li>
-              </ul>
-            </div>
-          </div>
+<div class="experience-section">
+  <h2>Skills Developed</h2>
+  <p>My role at Lenskart strengthened my abilities in several key areas:</p>
+  
+  <div class="skills-cards">
+    <div class="skills-grid">
+      <!-- Consumer Research -->
+      <div class="skill-category">
+        <h4>Consumer Research</h4>
+        <div class="skills-card-container">
+          <div class="skill-card">Qualitative Research Design</div>
+          <div class="skill-card">Interview Methodology</div>
+          <div class="skill-card">Focus Group Moderation</div>
+          <div class="skill-card">Ethnographic Observation</div>
         </div>
       </div>
       
-      <!-- Testimonial -->
-      <div class="experience-section">
-        <h2>Leadership Testimonial</h2>
-        <blockquote>
-          "Aaryaman brought exceptional research skills and cultural insight to our team. His ability to understand and decode consumer perceptions about eyewear and fashion helped us develop more resonant marketing strategies. His ethnographic studies and semiotic analysis provided a depth of understanding that has directly influenced our positioning as a fashion-forward eyewear brand."
-          <cite>— Peyush Bansal, Founder & CEO, Lenskart</cite>
-        </blockquote>
+      <!-- Brand Strategy -->
+      <div class="skill-category">
+        <h4>Brand Strategy</h4>
+        <div class="skills-card-container">
+          <div class="skill-card">Positioning Development</div>
+          <div class="skill-card">Cultural Trend Analysis</div>
+          <div class="skill-card">Consumer Insight Mining</div>
+          <div class="skill-card">Competitive Differentiation</div>
+        </div>
       </div>
+      
+      <!-- Semiotics -->
+      <div class="skill-category">
+        <h4>Semiotics</h4>
+        <div class="skills-card-container">
+          <div class="skill-card">Cultural Code Mapping</div>
+          <div class="skill-card">Visual Analysis</div>
+          <div class="skill-card">Meaning Transfer Frameworks</div>
+          <div class="skill-card">Brand Archetype Development</div>
+        </div>
+      </div>
+      
+      <!-- Project Management -->
+      <div class="skill-category">
+        <h4>Project Management</h4>
+        <div class="skills-card-container">
+          <div class="skill-card">Cross-functional Collaboration</div>
+          <div class="skill-card">Stakeholder Management</div>
+          <div class="skill-card">Research Timeline Planning</div>
+          <div class="skill-card">Executive Presentation</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
       
       <!-- Experience Navigation -->
       <div class="experience-navigation">
-        <a href="experience-times-ooh.html" class="nav-link prev">
+        <a href="../Experience/Times OOH.html" class="nav-link prev">
           <i class="fas fa-arrow-left"></i>
           <span>Times OOH</span>
         </a>
         <a href="../index.html#experience" class="btn btn-primary">All Experience</a>
-        <a href="experience-unacademy.html" class="nav-link next">
+        <a href="../Experience/Unacademy.html" class="nav-link next">
           <i class="fas fa-arrow-right"></i>
           <span>Unacademy</span>
         </a>
